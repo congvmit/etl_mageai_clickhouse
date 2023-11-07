@@ -11,12 +11,12 @@ blocks:
   language: python
   name: load_data
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: data_loader
   upstream_blocks: []
   uuid: load_data
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration: {}
   downstream_blocks: []
@@ -26,13 +26,13 @@ blocks:
   language: python
   name: export_data_to_s3
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: data_exporter
   upstream_blocks:
   - load_data
   uuid: export_data_to_s3
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration: {}
   downstream_blocks:
@@ -51,7 +51,7 @@ blocks:
   upstream_blocks:
   - load_data
   uuid: transform_data
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration: {}
   downstream_blocks: []
@@ -84,10 +84,10 @@ run_pipeline_in_one_process: false
 spark_config: {}
 tags: []
 type: python
-updated_at: '2023-11-06 01:11:48'
+updated_at: '2023-11-07 01:37:03'
 uuid: etl_with_clickhouse
 widgets:
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration:
     chart_style: vertical
@@ -107,7 +107,7 @@ widgets:
   upstream_blocks:
   - transform_data
   uuid: bar_chart_for_transform_data_1699232841133
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration:
     buckets: 7

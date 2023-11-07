@@ -11,16 +11,9 @@ if "test" not in globals():
 
 @data_loader
 def load_data_from_api(*args, **kwargs):
-    """
-    Template for loading data from API
-    """
     url = "https://api.covid19india.org/state_district_wise.json"
     response = requests.get(url)
     js = response.json()
-
-    # Import to MinIO
-
-    # Return path to the next
     return js
 
 
